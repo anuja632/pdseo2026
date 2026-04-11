@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ROOT COLORS */
+:root {
+  --theme-color: #00008b;
+  --theme-color2: #EA0000;
+  --title-color: #0F2239;
+  --body-color: #4D5765;
+  --white-color: #ffffff;
+  --light-color: #72849B;
+  --border-color: #ecf1f9;
+}
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+}
+
+/* SECTION */
+.faq-section {
+    padding: 100px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* LEFT IMAGE */
+.faq-image {
+    flex: 1;
+    position: relative;
+}
+
+.faq-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* OVERLAY */
+.faq-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(0,0,139,0.3),
+        rgba(234,0,0,0.3)
+    );
+}
+
+/* RIGHT CONTENT */
+.faq-content {
+    flex: 1;
+}
+
+.faq-content h2 {
+    font-size: 34px;
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.faq-content p.top {
+    color: var(--body-color);
+    margin-bottom: 30px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: var(--white-color);
+}
+
+/* QUESTION */
+.faq-question {
+    padding: 18px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h4 {
+    font-size: 16px;
+    color: var(--title-color);
+}
+
+/* ICON */
+.faq-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--theme-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    padding: 0 20px;
+}
+
+.faq-answer p {
+    padding: 10px 0 20px;
+    font-size: 14px;
+    color: var(--body-color);
+}
+
+/* ACTIVE */
+.faq-item.active {
+    border-color: var(--theme-color2);
+}
+
+.faq-item.active .faq-icon {
+    background: var(--theme-color2);
+    transform: rotate(45deg);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="faq-section">
+    <div class="container">
+
+        <!-- LEFT IMAGE -->
+        <div class="faq-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="">
+        </div>
+
+        <!-- RIGHT FAQ -->
+        <div class="faq-content">
+            <h2>Frequently Asked Questions</h2>
+            <p class="top">Everything you need to know about our services.</p>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What services do you provide?</h4>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer social media marketing, lead generation, content creation, and paid advertising.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you focus on real estate marketing?</h4>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we specialize in real estate marketing and generate high-quality leads.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How fast can I see results?</h4>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>You can start seeing initial results within a few days of campaign launch.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you provide reports?</h4>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide detailed performance and lead reports regularly.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+const items = document.querySelectorAll(".faq-item");
+
+items.forEach(item => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+
+        items.forEach(i => {
+            if(i !== item) {
+                i.classList.remove("active");
+                i.querySelector(".faq-answer").style.maxHeight = null;
+            }
+        });
+
+        item.classList.toggle("active");
+        const answer = item.querySelector(".faq-answer");
+
+        if(item.classList.contains("active")) {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+    });
+});
+</script>
+
+</body>
+</html>

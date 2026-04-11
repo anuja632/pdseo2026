@@ -1,0 +1,21 @@
+# RewriteEngine On
+
+# # Force HTTPS
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP:X-Forwarded-SSL} !on
+
+# # Force www
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+
+# # Redirect to https://www.puzzlediplomats.com
+# RewriteRule ^(.*)$ https://www.puzzlediplomats.com/$1 [R=301,L]
+
+# Redirect non-www to www with HTTPS
+RewriteCond %{HTTP_HOST} ^puzzlediplomats.com$ [NC]
+RewriteRule ^(.*)$ https://www.puzzlediplomats.com/$1 [R=301,L]
+
+# Redirects
+
+RewriteRule ^service\.html$ /digital-marketing-company-coimbatore.html [R=301,L]
+
+RewriteRule ^about\.html$ /about-us-real-estate-digital-marketing-agency.html [R=301,L]
