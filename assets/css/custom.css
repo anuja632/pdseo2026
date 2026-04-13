@@ -2561,3 +2561,340 @@ body {
     flex-direction:column;
   }
 }
+
+/* SECTION */
+.webDev-section {
+  background: var(--white-color);
+  padding: 100px 0;
+}
+
+/* IMAGE BOX */
+.webDev-imageBox {
+  background: var(--smoke-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.webDev-imageBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.webDev-imageBox img {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* BADGE */
+.webDev-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(0,0,139,0.08);
+  color: var(--theme-color);
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.webDev-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--title-color);
+  line-height: 1.3;
+}
+
+.webDev-title span {
+  color: var(--theme-color);
+}
+
+/* TEXT */
+.webDev-text {
+  margin-top: 18px;
+  font-size: 16px;
+  color: var(--body-color);
+  line-height: 1.8;
+}
+
+/* FEATURES */
+.webDev-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* FEATURE CARD */
+.webDev-feature {
+  background: var(--smoke-color);
+  border: 1px solid var(--border-color);
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.webDev-feature i {
+  color: var(--theme-color);
+  font-size: 18px;
+}
+
+.webDev-feature:hover {
+  border-color: var(--theme-color);
+  transform: translateY(-4px);
+}
+
+/* BUTTON */
+.webDev-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 26px;
+  background: var(--theme-color);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.webDev-btn:hover {
+  background: var(--theme-color2);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .webDev-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .webDev-text {
+    text-align: center;
+  }
+
+  .webDev-features {
+    grid-template-columns: 1fr;
+  }
+
+  .webDev-btn {
+    display: block;
+    margin: 25px auto 0;
+  }
+
+  .webDev-imageBox {
+    margin-bottom: 30px;
+  }
+}
+/* HERO BANNER */
+.heroBanner {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* BACKGROUND IMAGE */
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+/* CONTENT */
+.heroBanner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* BADGE */
+.heroBanner-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.heroBanner-title {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.heroBanner-title span {
+  color: #ffcc00;
+}
+
+/* TEXT */
+.heroBanner-text {
+  margin-top: 18px;
+  font-size: 17px;
+  color: #e5e5e5;
+  line-height: 1.8;
+}
+
+/* BUTTON */
+.heroBanner-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: var(--theme-color);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.heroBanner-btn:hover {
+  background: var(--theme-color2);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+
+  .heroBanner-title {
+    font-size: 30px;
+  }
+
+  .heroBanner-text {
+    font-size: 15px;
+  }
+}
+
+/* ===== SECTION ===== */
+.serviceSec {
+  padding: 80px 0;
+  background: #f5f7fb;
+}
+
+/* ===== CARD ===== */
+.serviceCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* IMAGE */
+.serviceCard img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+/* DEFAULT CONTENT (ICON + TITLE) */
+.serviceTop {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  transition: 0.4s;
+}
+
+/* ICON */
+.serviceIcon {
+  width: 70px;
+  height: 70px;
+  background: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 26px;
+}
+
+/* TITLE */
+.serviceTop h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* OVERLAY (HIDDEN FIRST) */
+.serviceOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 34, 57, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+/* HOVER CONTENT */
+.serviceContent {
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.4s;
+}
+
+/* DESCRIPTION */
+.serviceContent p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+.serviceContent a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== HOVER EFFECTS ===== */
+.serviceCard:hover img {
+  transform: scale(1.08);
+}
+
+/* SHOW OVERLAY */
+.serviceCard:hover .serviceOverlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* MOVE ICON + TITLE UP */
+.serviceCard:hover .serviceTop {
+  bottom: 55%;
+  transform: translateY(-50%);
+}
+
+/* SHOW TEXT */
+.serviceCard:hover .serviceContent {
+  opacity: 1;
+  transform: translateY(0);
+}
