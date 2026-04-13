@@ -3,156 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ With Image</title>
+<title>CRM Industries CTA FAQ</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-:root{
-  --theme-color:#00008b;
-  --title:#0F2239;
-  --text:#4D5765;
-  --bg:#F3F7FB;
-  --white:#fff;
-  --border:#e6e6e6;
-}
 
 /* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Segoe UI;
+  font-family:'Segoe UI',sans-serif;
 }
 
 body{
-  background:var(--bg);
+  background:#F3F7FB;
 }
 
-/* ================= FAQ SECTION ================= */
-.emf-wrap{
-  padding:100px 20px;
-}
-
-/* HEADER */
-.emf-head{
+/* COMMON TITLE */
+.sec-title{
   text-align:center;
   margin-bottom:50px;
 }
 
-.emf-head h2{
+.sec-title h2{
   font-size:38px;
-  color:var(--title);
+  color:#0F2239;
 }
 
-.emf-head h2 span{
-  color:var(--theme-color);
+.sec-title span{
+  color:#00008b;
 }
 
-.emf-head p{
-  max-width:600px;
+.sec-title p{
+  max-width:650px;
   margin:10px auto;
-  color:var(--text);
+  color:#4D5765;
 }
 
-/* LAYOUT */
-.emf-layout{
+/* SECTION */
+.section{
+  padding:100px 20px;
+}
+
+/* ================= INDUSTRIES ================= */
+.ind-grid{
   max-width:1100px;
   margin:auto;
   display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:40px;
-  align-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
 }
 
-/* LEFT FAQ */
-.emf-box{
+.ind-card{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  border:1px solid #e6e6e6;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.ind-card:hover{
+  transform:translateY(-10px);
+  border-color:#00008b;
+  box-shadow:0 20px 40px rgba(0,0,139,0.1);
+}
+
+.ind-icon{
+  width:55px;
+  height:55px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#00008b,#2563eb);
+  color:#fff;
+  border-radius:14px;
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+.ind-card h4{
+  color:#0F2239;
+  margin-bottom:6px;
+}
+
+.ind-card p{
+  font-size:14px;
+  color:#4D5765;
+}
+
+/* glow */
+.ind-card::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:rgba(0,0,139,0.06);
+  border-radius:50%;
+  bottom:-40px;
+  right:-40px;
+}
+
+/* ================= CTA ================= */
+.cta-box{
+  max-width:900px;
+  margin:auto;
+  background:linear-gradient(135deg,#00008b,#2563eb);
+  color:#fff;
+  padding:50px;
+  border-radius:22px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* floating circles */
+.cta-box::before,
+.cta-box::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:rgba(255,255,255,0.1);
+  border-radius:50%;
+}
+
+.cta-box::before{top:-60px;left:-60px;}
+.cta-box::after{bottom:-60px;right:-60px;}
+
+.cta-box h2{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.cta-box p{
+  opacity:0.9;
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+.cta-btn{
+  display:inline-block;
+  padding:12px 24px;
+  background:#fff;
+  color:#00008b;
+  font-weight:600;
+  border-radius:10px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.cta-btn:hover{
+  transform:scale(1.05);
+}
+.crmfaq7-section{
+  padding:100px 20px;
+  background:#F3F7FB;
+  font-family:Segoe UI;
+}
+
+.crmfaq7-head{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.crmfaq7-head h2{
+  font-size:38px;
+  color:#0F2239;
+}
+
+.crmfaq7-head h2 span{
+  color:#00008b;
+}
+
+/* WRAPPER */
+.crmfaq7-wrap{
+  max-width:900px;
+  margin:auto;
   display:flex;
   flex-direction:column;
-  gap:15px;
+  gap:14px;
 }
 
 /* ITEM */
-.emf-item{
-  background:var(--white);
-  border:1px solid var(--border);
+.crmfaq7-item{
+  background:#fff;
+  border:1px solid #e6e6e6;
   border-radius:14px;
   overflow:hidden;
-  transition:0.3s;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  transition:0.4s;
 }
 
-.emf-question{
+/* QUESTION */
+.crmfaq7-q{
   padding:18px 20px;
+  font-weight:600;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-weight:600;
-  color:var(--title);
-}
-
-.emf-question i{
+  color:#0F2239;
   transition:0.3s;
 }
 
+.crmfaq7-q:hover{
+  background:#f9fbff;
+}
+
 /* ANSWER */
-.emf-answer{
-  max-height:0;
-  overflow:hidden;
-  transition:0.4s ease;
-  padding:0 20px;
-  color:var(--text);
+.crmfaq7-a{
+  display:none;
+  padding:0 20px 18px;
   font-size:14px;
+  color:#4D5765;
   line-height:1.6;
 }
 
 /* ACTIVE */
-.emf-item.active .emf-answer{
-  max-height:200px;
-  padding:0 20px 18px;
+.crmfaq7-item.active .crmfaq7-a{
+  display:block;
 }
 
-.emf-item.active .emf-question i{
+.crmfaq7-item.active .crmfaq7-q i{
   transform:rotate(180deg);
-  color:var(--theme-color);
-}
-
-/* RIGHT IMAGE */
-.emf-image{
-  position:relative;
-}
-
-.emf-image img{
-  width:100%;
-  border-radius:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.15);
-}
-
-/* floating badge */
-.emf-badge{
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  background:var(--theme-color);
-  color:#fff;
-  padding:10px 14px;
-  border-radius:12px;
-  font-size:13px;
-  display:flex;
-  gap:8px;
-  align-items:center;
+  transition:0.3s;
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
-  .emf-layout{
-    grid-template-columns:1fr;
+@media(max-width:768px){
+  .sec-title h2{
+    font-size:28px;
   }
 
-  .emf-image{
-    order:-1;
+  .cta-box{
+    padding:30px;
   }
 }
 
@@ -161,84 +250,126 @@ body{
 
 <body>
 
-<section class="emf-wrap">
+<!-- ================= INDUSTRIES ================= -->
+<section class="section">
 
-  <!-- TITLE -->
-  <div class="emf-head">
-    <h2>Frequently Asked <span>Questions</span></h2>
-    <p>Find answers about our email marketing services</p>
+  <div class="sec-title">
+    <h2>Industries <span>We Serve</span></h2>
+    <p>We provide CRM solutions tailored for multiple business sectors</p>
   </div>
 
-  <!-- LAYOUT -->
-  <div class="emf-layout">
+  <div class="ind-grid">
 
-    <!-- LEFT FAQ -->
-    <div class="emf-box">
-
-      <div class="emf-item">
-        <div class="emf-question">
-          What is email marketing?
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="emf-answer">
-          Email marketing is a strategy to send targeted messages to customers for promotions and engagement.
-        </div>
-      </div>
-
-      <div class="emf-item">
-        <div class="emf-question">
-          How does automation work?
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="emf-answer">
-          Automation sends emails based on user actions like sign-ups or clicks.
-        </div>
-      </div>
-
-      <div class="emf-item">
-        <div class="emf-question">
-          Can email marketing increase sales?
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="emf-answer">
-          Yes, it improves conversions using targeted campaigns and follow-ups.
-        </div>
-      </div>
-
-      <div class="emf-item">
-        <div class="emf-question">
-          Do you provide tracking?
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <div class="emf-answer">
-          Yes, we provide open rate, click rate and performance analytics.
-        </div>
-      </div>
-
+    <div class="ind-card">
+      <div class="ind-icon"><i class="fa-solid fa-building"></i></div>
+      <h4>Real Estate Developers</h4>
+      <p>Manage property leads and sales efficiently.</p>
     </div>
 
-    <!-- RIGHT IMAGE -->
-    <div class="emf-image">
+    <div class="ind-card">
+      <div class="ind-icon"><i class="fa-solid fa-hammer"></i></div>
+      <h4>Builders & Construction</h4>
+      <p>Track projects and customer enquiries easily.</p>
+    </div>
 
-      <img src="https://img.freepik.com/premium-photo/email-marketing-business-strategy-hand-holding-tablet-pc-with-social-network-icon_1304044-6397.jpg" alt="FAQ Image">
+    <div class="ind-card">
+      <div class="ind-icon"><i class="fa-solid fa-handshake"></i></div>
+      <h4>Property Consultants</h4>
+      <p>Organize client data and improve conversions.</p>
+    </div>
 
-      <div class="emf-badge">
-        <i class="fa-solid fa-envelope"></i> Email Marketing Experts
+    <div class="ind-card">
+      <div class="ind-icon"><i class="fa-solid fa-store"></i></div>
+      <h4>Small & Medium Businesses</h4>
+      <p>Automate sales and manage customers smartly.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section">
+
+  <div class="cta-box">
+
+    <h2>Looking for Sales CRM Services in Coimbatore?</h2>
+    <p>
+      Let Puzzle Diplomats help you manage leads efficiently and increase your sales with smart CRM automation.
+    </p>
+
+    <a href="#" class="cta-btn">Contact Us Today</a>
+
+  </div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="crmfaq7-section">
+
+  <div class="crmfaq7-head">
+    <h2>Frequently <span>Asked Questions</span></h2>
+  </div>
+
+  <div class="crmfaq7-wrap">
+
+    <div class="crmfaq7-item">
+      <div class="crmfaq7-q">
+        What is CRM and why is it important?
+        <i class="fa-solid fa-chevron-down"></i>
       </div>
+      <div class="crmfaq7-a">
+        CRM helps manage customer data, track leads, and improve sales efficiency.
+      </div>
+    </div>
 
+    <div class="crmfaq7-item">
+      <div class="crmfaq7-q">
+        Can CRM automate follow-ups?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="crmfaq7-a">
+        Yes, CRM systems can automate emails, WhatsApp messages, and reminders.
+      </div>
+    </div>
+
+    <div class="crmfaq7-item">
+      <div class="crmfaq7-q">
+        Is CRM useful for real estate?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="crmfaq7-a">
+        Yes, it is essential for managing property leads and closing deals faster.
+      </div>
+    </div>
+
+    <div class="crmfaq7-item">
+      <div class="crmfaq7-q">
+        Can I track all my sales in CRM?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="crmfaq7-a">
+        Yes, CRM gives dashboards to track leads, deals, and performance.
+      </div>
+    </div>
+
+    <div class="crmfaq7-item">
+      <div class="crmfaq7-q">
+        Do you provide CRM setup support?
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="crmfaq7-a">
+        Yes, we provide full setup, training, and ongoing support.
+      </div>
     </div>
 
   </div>
 
 </section>
 
-<!-- SCRIPT -->
 <script>
-const items = document.querySelectorAll(".emf-item");
-
-items.forEach(item => {
-  item.querySelector(".emf-question").addEventListener("click", () => {
-    item.classList.toggle("active");
+document.querySelectorAll(".crmfaq7-q").forEach(q=>{
+  q.addEventListener("click",()=>{
+    q.parentElement.classList.toggle("active");
   });
 });
 </script>
