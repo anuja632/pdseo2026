@@ -915,3 +915,249 @@ function showContent(index) {
 
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Choose & Industries</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+}
+
+/* ================= WHY CHOOSE ================= */
+
+.why-unique-section {
+  padding: 80px 6%;
+  background: #f9fbff;
+  text-align: center;
+}
+
+.why-unique-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  color: #0F2239;
+}
+
+.why-unique-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.why-unique-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.4s;
+}
+
+/* SIDE BAR */
+.why-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #EA0000;
+  transition: 0.4s;
+}
+
+.why-unique-card i {
+  font-size: 22px;
+  color: #EA0000;
+  margin-bottom: 10px;
+}
+
+.why-unique-card h3 {
+  font-size: 16px;
+  color: #333;
+}
+
+/* HOVER */
+.why-unique-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.why-unique-card:hover .why-bar {
+  width: 100%;
+  opacity: 0.1;
+}
+
+/* ================= INDUSTRIES ================= */
+
+.industry-unique-section {
+  padding: 80px 6%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.industry-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+  color: #0F2239;
+}
+
+.industry-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.industry-tile {
+  border: 2px solid #eee;
+  padding: 30px 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+/* ICON */
+.industry-tile i {
+  font-size: 28px;
+  color: #00008b;
+  margin-bottom: 10px;
+  transition: 0.4s;
+}
+
+.industry-tile p {
+  font-size: 15px;
+  color: #333;
+}
+
+/* HOVER FILL */
+.industry-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00008b;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.4s;
+  z-index: 0;
+}
+
+.industry-tile:hover::before {
+  transform: scaleY(1);
+}
+
+.industry-tile:hover i,
+.industry-tile:hover p {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.industry-tile:hover {
+  border-color: #00008b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 576px) {
+  .why-unique-title,
+  .industry-title {
+    font-size: 26px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- WHY CHOOSE -->
+<section class="why-unique-section">
+
+  <h2 class="why-unique-title">Why Choose Puzzle Diplomats</h2>
+
+  <div class="why-unique-grid">
+
+    <div class="why-unique-card">
+      <div class="why-bar"></div>
+      <i class="fas fa-search"></i>
+      <h3>Real Estate SEO Specialists</h3>
+    </div>
+
+    <div class="why-unique-card">
+      <div class="why-bar"></div>
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>Local SEO Expertise in Coimbatore</h3>
+    </div>
+
+    <div class="why-unique-card">
+      <div class="why-bar"></div>
+      <i class="fas fa-chart-line"></i>
+      <h3>Proven Ranking Strategies</h3>
+    </div>
+
+    <div class="why-unique-card">
+      <div class="why-bar"></div>
+      <i class="fas fa-file-alt"></i>
+      <h3>Transparent Reporting</h3>
+    </div>
+
+    <div class="why-unique-card">
+      <div class="why-bar"></div>
+      <i class="fas fa-wallet"></i>
+      <h3>Affordable SEO Packages</h3>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INDUSTRIES -->
+<section class="industry-unique-section">
+
+  <h2 class="industry-title">Industries We Serve</h2>
+
+  <div class="industry-tiles">
+
+    <div class="industry-tile">
+      <i class="fas fa-building"></i>
+      <p>Real Estate Developers</p>
+    </div>
+
+    <div class="industry-tile">
+      <i class="fas fa-hard-hat"></i>
+      <p>Builders & Construction Companies</p>
+    </div>
+
+    <div class="industry-tile">
+      <i class="fas fa-map"></i>
+      <p>Plot Promoters</p>
+    </div>
+
+    <div class="industry-tile">
+      <i class="fas fa-home"></i>
+      <p>Villa & Apartment Projects</p>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
