@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Email Marketing</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#050b18;
+  color:white;
+}
+
+/* MAIN SECTION */
+.about-section{
+  width:100%;
+  padding:90px 20px;
+  background: radial-gradient(circle at top left,#1e3a8a,transparent 40%),
+              radial-gradient(circle at bottom right,#0ea5e9,transparent 40%),
+              #050b18;
+  overflow:hidden;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* LEFT IMAGE DESIGN */
+.visual{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.circle{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0ea5e9,#1e3a8a);
+  filter:blur(0px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:80px;
+  box-shadow:0 0 60px rgba(14,165,233,0.6);
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+}
+
+.badge{
+  position:absolute;
+  padding:10px 14px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:12px;
+  font-size:12px;
+}
+
+.badge1{top:10%;left:5%;}
+.badge2{bottom:15%;right:0;}
+.badge3{top:50%;right:-20px;}
+
+/* RIGHT CONTENT */
+.content h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.content h2 span{
+  color:#38bdf8;
+}
+
+.content p{
+  opacity:0.8;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+/* STEPS / PROCESS */
+.steps{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.step{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:12px;
+  border-left:3px solid #38bdf8;
+  transition:0.3s;
+}
+
+.step:hover{
+  transform:translateX(5px);
+  background:rgba(56,189,248,0.1);
+}
+
+.num{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:#38bdf8;
+  color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+.step h4{
+  margin-bottom:5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .steps{
+    align-items:center;
+  }
+
+  .step{
+    width:100%;
+    justify-content:center;
+    text-align:left;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="about-section">
+
+  <div class="container">
+
+    <!-- LEFT VISUAL -->
+    <div class="visual">
+      <div class="circle">📧</div>
+
+      <div class="badge badge1">Automation</div>
+      <div class="badge badge2">Lead Growth</div>
+      <div class="badge badge3">Smart Targeting</div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+      <h2>Why Choose Our <span>Email Marketing?</span></h2>
+
+      <p>
+        We help businesses turn emails into powerful sales machines using automation,
+        personalization, and data-driven strategies.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <h4>Strategy Planning</h4>
+            <p>We analyze your business and create a winning email plan.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <h4>Design & Content</h4>
+            <p>We design attractive emails that people actually open.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <h4>Automation Setup</h4>
+            <p>Emails are automated for leads, follow-ups, and sales.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <h4>Performance Tracking</h4>
+            <p>We track open rates, clicks, and conversions.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Hero</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+}
+
+/* HERO */
+.uq-hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 20px;
+    background: linear-gradient(135deg,#0f172a,#111827,#0b1220);
+    position:relative;
+    overflow:hidden;
+}
+
+/* FLOAT ICONS */
+.uq-icon{
+    position:absolute;
+    font-size:22px;
+    opacity:0.15;
+    animation: float 6s infinite ease-in-out;
+}
+
+.uq-icon:nth-child(1){top:10%;left:8%;}
+.uq-icon:nth-child(2){top:20%;right:10%; animation-delay:1s;}
+.uq-icon:nth-child(3){bottom:15%;left:12%; animation-delay:2s;}
+.uq-icon:nth-child(4){bottom:25%;right:15%; animation-delay:3s;}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+/* CONTAINER */
+.uq-container{
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+    z-index:2;
+}
+
+/* LEFT */
+.uq-left{
+    flex:1;
+    color:#fff;
+}
+
+.uq-badge{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.uq-left h1{
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.uq-left h1 span{
+    color:#38bdf8;
+}
+
+.uq-left p{
+    font-size:16px;
+    opacity:0.85;
+    line-height:1.6;
+    max-width:500px;
+    margin-bottom:25px;
+}
+
+/* BUTTONS */
+.uq-btns{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.uq-btn{
+    padding:12px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.uq-primary{
+    background:#38bdf8;
+    color:#000;
+}
+
+.uq-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+/* RIGHT DASHBOARD (NEW UNIQUE DESIGN) */
+.uq-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+/* DASHBOARD BOX */
+.uq-dashboard{
+    width:360px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    color:#fff;
+}
+
+/* TOP BAR */
+.uq-topbar{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-size:13px;
+    opacity:0.8;
+}
+
+/* FLOW LINES */
+.uq-flow{
+    height:140px;
+    background:linear-gradient(135deg,#38bdf8 10%,transparent 70%);
+    border-radius:14px;
+    position:relative;
+    margin-bottom:15px;
+    overflow:hidden;
+}
+
+.uq-dot{
+    width:10px;
+    height:10px;
+    background:#38bdf8;
+    border-radius:50%;
+    position:absolute;
+    animation: move 3s infinite ease-in-out;
+}
+
+.uq-dot:nth-child(1){top:30px;left:20px;}
+.uq-dot:nth-child(2){top:60px;left:120px; animation-delay:1s;}
+.uq-dot:nth-child(3){top:90px;left:220px; animation-delay:2s;}
+
+@keyframes move{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.8);}
+}
+
+/* METRICS GRID */
+.uq-metrics{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.uq-box{
+    background:rgba(255,255,255,0.08);
+    padding:12px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.uq-box h4{
+    color:#38bdf8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .uq-left h1{
+        font-size:34px;
+    }
+
+    .uq-container{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .uq-btns{
+        justify-content:center;
+    }
+}
+</style>
+
+
+<section class="uq-hero">
+
+    <!-- ICONS -->
+    <div class="uq-icon">✉️</div>
+    <div class="uq-icon">📧</div>
+    <div class="uq-icon">📨</div>
+    <div class="uq-icon">💌</div>
+
+    <div class="uq-container">
+
+        <!-- LEFT -->
+        <div class="uq-left">
+
+            <div class="uq-badge">📩 Email Marketing Agency</div>
+
+            <h1>
+                Grow Your Business With <span>Email Campaigns</span>
+            </h1>
+
+            <p>
+                We design high-converting email systems that automate leads,
+                improve engagement, and scale your business.
+            </p>
+
+            <div class="uq-btns">
+                <a href="#" class="uq-btn uq-primary">Get Started</a>
+                <a href="#" class="uq-btn uq-outline">View Services</a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT (NEW UNIQUE DASHBOARD) -->
+        <div class="uq-right">
+
+            <div class="uq-dashboard">
+
+                <div class="uq-topbar">
+                    <span>Live Campaign</span>
+                    <span>Active 🔥</span>
+                </div>
+
+                <div class="uq-flow">
+                    <div class="uq-dot"></div>
+                    <div class="uq-dot"></div>
+                    <div class="uq-dot"></div>
+                </div>
+
+                <div class="uq-metrics">
+
+                    <div class="uq-box">
+                        <h4>2.4K</h4>
+                        <p>Emails Sent</p>
+                    </div>
+
+                    <div class="uq-box">
+                        <h4>68%</h4>
+                        <p>Open Rate</p>
+                    </div>
+
+                    <div class="uq-box">
+                        <h4>1.2K</h4>
+                        <p>Clicks</p>
+                    </div>
+
+                    <div class="uq-box">
+                        <h4>320</h4>
+                        <p>Leads</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

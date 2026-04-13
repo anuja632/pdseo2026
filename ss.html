@@ -3,124 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Shape Services</title>
 
-<title>Website Development Services</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* ===== SECTION ===== */
-.serviceSec {
-  padding: 80px 0;
-  background: #f5f7fb;
+/* ROOT */
+:root {
+  --theme-color:#00008b;
+  --title-color:#0F2239;
+  --body-color:#4D5765;
+  --smoke-color:#F3F7FB;
+  --white:#fff;
 }
 
-/* ===== CARD ===== */
-.serviceCard {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI;
 }
 
-/* IMAGE */
-.serviceCard img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  transition: 0.4s;
+body{
+  background:var(--smoke-color);
 }
 
-/* DEFAULT CONTENT (ICON + TITLE) */
-.serviceTop {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: #fff;
-  z-index: 2;
-  transition: 0.4s;
-}
-
-/* ICON */
-.serviceIcon {
-  width: 70px;
-  height: 70px;
-  background: #3b82f6;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 12px;
-  font-size: 26px;
+/* SECTION */
+.section{
+  padding:90px 20px;
+  text-align:center;
 }
 
 /* TITLE */
-.serviceTop h4 {
-  font-size: 22px;
-  font-weight: 700;
+h2{
+  font-size:38px;
+  color:var(--title-color);
 }
 
-/* OVERLAY (HIDDEN FIRST) */
-.serviceOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 34, 57, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.4s;
+h2 span{
+  color:var(--theme-color);
 }
 
-/* HOVER CONTENT */
-.serviceContent {
-  color: #fff;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.4s;
+p.sub{
+  max-width:600px;
+  margin:10px auto 50px;
+  color:var(--body-color);
 }
 
-/* DESCRIPTION */
-.serviceContent p {
-  font-size: 14px;
-  margin: 10px 0;
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* 📩 EMAIL SHAPE CARD */
+.mail-card{
+  position:relative;
+  background:var(--white);
+  padding:30px 25px;
+  border-radius:10px;
+  text-align:left;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+/* envelope top fold */
+.mail-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:linear-gradient(135deg,#00008b, #3b82f6);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* bottom envelope triangle */
+.mail-card::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:rgba(0,0,139,0.05);
+  clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+/* ICON */
+.mail-icon{
+  width:50px;
+  height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--theme-color);
+  color:#fff;
+  border-radius:12px;
+  font-size:18px;
+  margin-top:20px;
+  margin-bottom:15px;
+  position:relative;
+  z-index:2;
+}
+
+/* TITLE */
+.mail-card h3{
+  font-size:18px;
+  color:var(--title-color);
+  position:relative;
+  z-index:2;
+}
+
+/* TEXT */
+.mail-card p{
+  font-size:14px;
+  color:var(--body-color);
+  margin-top:8px;
+  line-height:1.6;
+  position:relative;
+  z-index:2;
+}
+
+/* HOVER OPEN EFFECT */
+.mail-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* hover envelope glow */
+.mail-card:hover::before{
+  filter:brightness(1.2);
 }
 
 /* BUTTON */
-.serviceContent a {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 600;
+.mail-card a{
+  display:inline-block;
+  margin-top:15px;
+  font-size:14px;
+  color:var(--theme-color);
+  font-weight:600;
+  text-decoration:none;
+  position:relative;
+  z-index:2;
 }
 
-/* ===== HOVER EFFECTS ===== */
-.serviceCard:hover img {
-  transform: scale(1.08);
-}
-
-/* SHOW OVERLAY */
-.serviceCard:hover .serviceOverlay {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* MOVE ICON + TITLE UP */
-.serviceCard:hover .serviceTop {
-  bottom: 55%;
-  transform: translateY(-50%);
-}
-
-/* SHOW TEXT */
-.serviceCard:hover .serviceContent {
-  opacity: 1;
-  transform: translateY(0);
+/* RESPONSIVE */
+@media(max-width:768px){
+  h2{font-size:28px;}
 }
 
 </style>
@@ -128,263 +165,49 @@
 
 <body>
 
-<section class="serviceSec">
-<div class="container">
+<section class="section">
 
-<div class="row g-4">
-<!-- 1. Business Website -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/website-mockup-ai-image-generator_784890-13080.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-globe"></i>
-      </div>
-      <h4>Business Websites</h4>
+  <h2>Our <span>Email Services</span></h2>
+  <p class="sub">
+    We design powerful email marketing systems that help you automate, convert and grow faster.
+  </p>
+
+  <div class="grid">
+
+    <!-- CARD 1 -->
+    <div class="mail-card">
+      <div class="mail-icon"><i class="fa-solid fa-paper-plane"></i></div>
+      <h3>Email Automation</h3>
+      <p>Automate welcome emails, drip campaigns and workflows easily.</p>
+      <a href="#">Learn More →</a>
     </div>
 
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Corporate, company profile, portfolio, and service-based websites.</p>
-        <a href="#">Read More</a>
-      </div>
+    <!-- CARD 2 -->
+    <div class="mail-card">
+      <div class="mail-icon"><i class="fa-solid fa-chart-line"></i></div>
+      <h3>Campaign Strategy</h3>
+      <p>Create high converting email campaigns for better engagement.</p>
+      <a href="#">Learn More →</a>
     </div>
+
+    <!-- CARD 3 -->
+    <div class="mail-card">
+      <div class="mail-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h3>Lead Generation</h3>
+      <p>Capture and convert leads using smart funnels and targeting.</p>
+      <a href="#">Learn More →</a>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="mail-card">
+      <div class="mail-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3>Performance Tracking</h3>
+      <p>Track clicks, open rate and conversions in real time.</p>
+      <a href="#">Learn More →</a>
+    </div>
+
   </div>
-</div>
 
-<!-- 2. E-Commerce -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/screen-showing-homepage-website_973183-53734.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
-      <h4>E-Commerce Websites</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Online stores with payment gateway, cart system, and order tracking.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 3. Landing Pages -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/landing-page-template-architect-company_1139417-131500.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-bullseye"></i>
-      </div>
-      <h4>Landing Pages</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>High-conversion pages for ads, campaigns, and lead generation.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 4. Web Applications -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/real-estate-meeting-table-with-laptop-blueprints-illustration-design_1277546-7270.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-laptop-code"></i>
-      </div>
-      <h4>Web Applications</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>CRM, ERP, dashboards, booking systems, and SaaS applications.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 5. SEO Optimization -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-chart-line"></i>
-      </div>
-      <h4>SEO Optimization</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>On-page SEO, meta tags, schema, and search engine optimization.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 6. Speed Optimization -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-bolt"></i>
-      </div>
-      <h4>Speed Optimization</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Improve website speed, Core Web Vitals, and performance tuning.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 7. UI/UX Design -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="./assets/images/northeast.png" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-pen-nib"></i>
-      </div>
-      <h4>UI/UX Design</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Modern UI design, wireframing, and user experience optimization.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 8. Real Estate -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="./assets/images/mock3 1.png" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-building"></i>
-      </div>
-      <h4>Real Estate Websites</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Property listings, advanced filters, and enquiry systems.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 9. Hosting & Deployment -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/cloud-infrastructure-with-multiple-servers_1104763-20744.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-cloud"></i>
-      </div>
-      <h4>Hosting & Deployment</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Domain setup, hosting configuration, SSL, and deployment.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 10. API Integration -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/api-application-programming-interface-concept-programmer-types-laptop_1157866-1912.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-link"></i>
-      </div>
-      <h4>API Integration</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Payment gateways, CRM, WhatsApp, and API integrations.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 11. Responsive Design -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="./assets/images/srmrealestate.png" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon">
-        <i class="fa-solid fa-mobile-screen"></i>
-      </div>
-      <h4>Responsive Design</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Mobile-friendly, tablet optimized, and cross-browser compatible.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 12. Automation Solutions -->
-<div class="col-lg-4">
-  <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
-    
-    <div class="serviceTop">
-      <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
-        <i class="fa-solid fa-robot"></i>
-      </div>
-      <h4>Automation Solutions</h4>
-    </div>
-
-    <div class="serviceOverlay">
-      <div class="serviceContent">
-        <p>Workflow automation, dashboards, and business tools.</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-</div>
 </section>
 
 </body>
