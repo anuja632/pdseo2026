@@ -55,7 +55,9 @@ body, html{
 #custom-navbar{
   position: fixed;
  }
- 
+ #ahr{
+  color:white !important;
+}
     /* Navbar with patterned dark background */
     .navbar {
       background: #00008b url("https://studywise.online/assets/img/update1/bg/pattern_bg_2.png");
