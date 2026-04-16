@@ -33,6 +33,59 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggleBtn = document.getElementById("servicesToggle");
+  const collapseEl = document.getElementById("mobileServices");
+  const icon = document.getElementById("servicesIcon");
+
+  const bsCollapse = new bootstrap.Collapse(collapseEl, {
+    toggle: false
+  });
+
+  toggleBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (collapseEl.classList.contains("show")) {
+      bsCollapse.hide();
+    } else {
+      bsCollapse.show();
+    }
+  });
+
+  // Arrow animation
+  collapseEl.addEventListener("shown.bs.collapse", function () {
+    icon.style.transform = "rotate(180deg)";
+  });
+
+  collapseEl.addEventListener("hidden.bs.collapse", function () {
+    icon.style.transform = "rotate(0deg)";
+  });
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+  const serviceLink = document.querySelector(".modern-dropdown > .nav-link");
+
+  serviceLink.addEventListener("click", function (e) {
+
+    // If clicked on arrow (dropdown toggle), don't redirect
+    if (this.classList.contains("dropdown-toggle")) {
+      
+      // Check if user clicked text OR arrow
+      if (e.offsetX > this.offsetWidth - 25) {
+        // Clicked near arrow → open dropdown
+        e.preventDefault();
+      } else {
+        // Clicked text → go to page
+        window.location.href = this.getAttribute("href");
+      }
+
+    }
+
+  });
+
+});
 
 function animateCounter(counter) {
   const target = +counter.getAttribute('data-target');

@@ -69,11 +69,82 @@
     <!-- Desktop nav links -->
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <!-- SERVICES MOBILE -->
+<li class="nav-item dropdown modern-dropdown">
+  <a class="nav-link dropdown-toggle" href="digital-marketing-company-coimbatore.html" data-bs-toggle="dropdown">
+    Services
+  </a>
+
+  <ul class="dropdown-menu modern-menu">
+
+    <li>
+      <a href="socialmarketing.html">
+        <i class="fa-solid fa-bullhorn"></i>
+        <div>
+          <h6>Social Media Marketing</h6>
+          <small>Ads & Branding</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="websitedevelopment.html">
+        <i class="fa-solid fa-code"></i>
+        <div>
+          <h6>Website Development</h6>
+          <small>UI/UX & SEO Ready</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="whatsappmarketing.html">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div>
+          <h6>WhatsApp Marketing</h6>
+          <small>Automation & Leads</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="seo.html">
+        <i class="fa-solid fa-chart-line"></i>
+        <div>
+          <h6>SEO</h6>
+          <small>Rank & Grow</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="salescrmservice.html">
+        <i class="fa-solid fa-database"></i>
+        <div>
+          <h6>Sales CRM</h6>
+          <small>Lead Management</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="emailmarketing.html">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <div>
+          <h6>Email Marketing</h6>
+          <small>Automation</small>
+        </div>
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+     
         <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -87,24 +158,91 @@
 </nav>
 
 
-<!-- Offcanvas for mobile -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-  <div class="offcanvas-header">
-    <img src="./assets/images/logo.png" alt="Logo" class="offcanvas-logo">
+<!-- ===== OFFCANVAS MOBILE MENU ===== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+  
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <img src="./assets/images/logo.png" alt="Logo" style="height:40px;">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
+
+  <!-- Body -->
   <div class="offcanvas-body">
+
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fa-solid fa-house me-2"></i> Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">
+          <i class="fa-solid fa-user me-2"></i> About Us
+        </a>
+      </li>
+
+  <li class="nav-item">
+
+  <div class="d-flex g-5 align-items-center">
+
+    <!-- TEXT → GO TO PAGE -->
+    <a class="nav-link"
+       href="digital-marketing-company-coimbatore.html">
+      <i class="fa-solid fa-briefcase me-2"></i> Services
+    </a>
+
+    <!-- ARROW → TOGGLE -->
+    <a class="nav-link"
+       href="#mobileServices"
+       id="servicesToggle">
+      <i class="fa-solid fa-chevron-down" id="servicesIcon"></i>
+    </a>
+
+  </div>
+
+  <!-- DROPDOWN -->
+  <div class="collapse " id="mobileServices">
+    <ul class="list-unstyled">
+
+      <li><a class="nav-link" href="socialmarketing.html">Social Media Marketing</a></li>
+      <li><a class="nav-link" href="websitedevelopment.html">Website Design & Development</a></li>
+      <li><a class="nav-link" href="whatsappmarketing.html">WhatsApp Marketing</a></li>
+      <li><a class="nav-link" href="seo.html">SEO</a></li>
+      <li><a class="nav-link" href="salescrmservice.html">Sales CRM Service</a></li>
+      <li><a class="nav-link" href="emailmarketing.html">Email Marketing</a></li>
+      <li><a class="nav-link" href="logodesign.html">Logo Designing</a></li>
+
     </ul>
-    <div class="mt-3">
-   <a href="contact.html" class="register-btn  wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+  </div>
+
+</li>
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link" href="blog.php">
+          <i class="fa-solid fa-blog me-2"></i> Blog
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+          <i class="fa-solid fa-envelope me-2"></i> Contact Us
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- CTA Button -->
+    <div class="mt-4 text-center">
+      <a href="contact.html" class="register-btn w-100">
         REGISTER NOW →
-      </a>    </div>
+      </a>
+    </div>
+
   </div>
 </div>
 
@@ -123,9 +261,9 @@
       result-driven SEO strategies.
     </p>
 
-    <div class="seo-banner-buttons">
-      <a href="#" class="banner-btn-primary">Get Free SEO Audit</a>
-      <a href="#" class="banner-btn-outline">View SEO Services</a>
+        <div class="btns">
+      <a href="contact.html" class="uq-btn uq-primary">Get Started</a>
+      <a href="#services" class="uq-btn uq-outline">View services</a>
     </div>
 
   </div>
@@ -156,8 +294,8 @@
       </ul>
 
       <div class="seoabout-buttons">
-        <a href="#" class="seoabout-btn-primary">Get Free SEO Audit</a>
-        <a href="#" class="seoabout-btn-outline">Explore Services</a>
+        <a href="contact.html" class="seoabout-btn-primary">Get Free SEO Audit</a>
+        <a href="#services" class="seoabout-btn-outline">Explore Services</a>
       </div>
 
       <div class="seoabout-stats">
@@ -178,21 +316,21 @@
     </div>
 
     <div class="seoabout-image">
-      <img src="./assets/images/seobanner.jpg" alt="SEO Company in Coimbatore">
+      <img src="./assets/images/seobanner.jpg" alt="SEO Company in Coimbatore" loading="lazy">
     </div>
 
   </div>
 
 </section>
 
-<section class="seo-services-wrap">
+<section class="seo-services-wrap" id="services">
   <h2 class="seo-title">Our SEO Services in Coimbatore</h2>
 
   <div class="seo-flex-grid">
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+        <img src="https://img.freepik.com/premium-photo/3d-seo-optimization-with-search-bar-marketing-social-media-website-laptop-concept_926199-4183608.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-search"></i></div>
@@ -203,7 +341,7 @@
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+        <img src="https://img.freepik.com/free-photo/person-writing-sticky-notes-remember-task-computer-business-woman-using-post-it-memo-paper-as-reminder-work-project-planning-company-efficiency-inspiration_482257-30592.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="On-Page SEO Optimization">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-chart-line"></i></div>
@@ -214,7 +352,7 @@
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
+        <img src="https://img.freepik.com/premium-photo/backlinks-laptop-access-website-website-is-linked-backlinks-technology-online-web_36325-5449.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Link Building">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-link"></i></div>
@@ -225,7 +363,7 @@
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+        <img src="https://img.freepik.com/free-photo/media-journalism-global-daily-news-content-concept_53876-123733.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Content Optimization">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-pen-nib"></i></div>
@@ -236,7 +374,7 @@
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1521790360284-ec1b7c1c0a6b">
+        <img src="https://img.freepik.com/premium-photo/landing-page-laptop-with-local-seo-concept-3d-mobile-computer-display-with-local-seo-concept-landing-page_1028938-41757.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Local SEO in Coimbatore">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -247,7 +385,7 @@
 
     <div class="seo-box">
       <div class="seo-image">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+        <img src="https://img.freepik.com/premium-photo/man-working-with-tablet-manage-search-engine-optimization-seo-with-social-media-website_926199-3823649.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Technical SEO" loading="lazy">
       </div>
       <div class="seo-info">
         <div class="seo-icon"><i class="fas fa-cogs"></i></div>
@@ -547,61 +685,158 @@ pdFaqCards.forEach(card => {
   </button>
 </div>
 
+<style>/* Phone Links */
+.footer-contact a {
+  color: #ddd !important;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #00c6ff;
+}
+</style>
 <!-- ===== Footer Section Start ===== -->
 <footer class="footer-section text-white">
-  <div class="container-fluid">
+  <div class="container g-5">
     <div class="row g-4">
-      
+
       <!-- Brand Info -->
-      <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+      <div class="col-lg-3 col-md-6">
         <div class="footer-logo mb-3">
-          <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid" />
+          <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid">
         </div>
         <p>
           We help real estate brands grow with strategy, creative content, and performance marketing —
           turning your projects into profitable success stories.
         </p>
+
         <div class="social-links mt-3">
-          <a href="https://www.facebook.com/profile.php?id=61566677074509" target="_blank" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/in/puzzle-diplomats-digitalmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/puzzlediplomatsmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/917094858696" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/people/Puzzle-Diplomats/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/puzzlediplomats" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://www.instagram.com/puzzlediplomatsads/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/917094858696" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+      <div class="col-lg-2 col-md-6">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="blog.php">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+          <li class="mb-2">
+            <a href="index.html"><i class="fa-solid fa-house me-2"></i> Home</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="about.html"><i class="fa-solid fa-user me-2"></i> About</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="service.html"><i class="fa-solid fa-briefcase me-2"></i> Services</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="blog.php"><i class="fa-solid fa-blog me-2"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="contact.html"><i class="fa-solid fa-envelope me-2"></i> Contact</a>
+          </li>
+
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-        <h5 class="fw-bold mb-3">Our Solutions</h5>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="service.html">Brand Strategy</a></li>
-          <li><a href="service.html">Content & Creative</a></li>
-          <li><a href="service.html">Lead Generation</a></li>
-          <li><a href="service.html">Performance Marketing</a></li>
-          <li><a href="service.html">Web Development</a></li>
+
+          <li class="mb-2">
+            <a href="socialmarketing.html">
+              <i class="fa-solid fa-bullhorn me-2"></i> Social Media Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="websitedevelopment.html">
+              <i class="fa-solid fa-code me-2"></i> Website Development
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="whatsappmarketing.html">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="seo.html">
+              <i class="fa-solid fa-chart-line me-2"></i> SEO
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="salescrmservice.html">
+              <i class="fa-solid fa-database me-2"></i> Sales CRM
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="emailmarketing.html">
+              <i class="fa-solid fa-envelope-open-text me-2"></i> Email Marketing
+            </a>
+          </li>
+
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+      <div class="col-lg-4 col-md-6">
         <h5 class="fw-bold mb-3">Get In Touch</h5>
         <ul class="list-unstyled footer-contact">
-          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Coimbatore, Dubai</li>
-          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> puzzle@diplomats.co.in</li>
-          <li><i class="fa-solid fa-phone me-2"></i> +91 70948 58696</li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-building me-2"></i>
+            <strong>Head Office:</strong> Coimbatore
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-map-location-dot me-2"></i>
+            <strong>Branches:</strong> Bangalore, Chennai, Dubai
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-envelope me-2"></i>
+            manager@puzzlediplomats.com
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-phone me-2"></i>
+            <strong>India:</strong><a href="tel:+917094858696" class="d-block">+91 7094858696</a>
+            
+            <a href="tel:+918778915403" class="d-block">+91 8778915403</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-globe me-2"></i>
+            <strong>UAE:</strong>
+            <a href="tel:+971504092758">+971 50 409 2758</a>
+          </li>
+
         </ul>
       </div>
+
     </div>
 
     <hr class="my-4">
@@ -609,13 +844,15 @@ pdFaqCards.forEach(card => {
     <div class="row text-center">
       <div class="col-12">
         <p class="mb-0 small">
-          &copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Coimbatore.
+          &copy; 2026  Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Coimbatore.
         </p>
       </div>
     </div>
+
   </div>
 </footer>
 <!-- ===== Footer Section End ===== -->
+
 
 
 

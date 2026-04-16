@@ -134,7 +134,8 @@ body, html{
 /* White offcanvas background */
 .offcanvas , .offcanvas .navbar-nav  {
   background: #ffffff;
-  color: #00008b; /* text color for links */
+  color: #00008b;
+  text-align: start; /* text color for links */
 }
 
 /* Offcanvas logo */
@@ -150,6 +151,7 @@ body, html{
 
   font-weight: 600;
   margin: 10px 0;
+  /* justify-content: center; */
 }
 
 .offcanvas .nav-link:hover {
@@ -2638,4 +2640,60 @@ padding: 20px;
 }
 .swiper-pagination-bullet-active {
   background: #EA0000;
+}
+
+.modern-menu {
+  width: 280px;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Item layout */
+.modern-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  border-left: 3px solid transparent;
+  transition: 0.3s;
+}
+
+/* Icon */
+.modern-menu i {
+  font-size: 16px;
+  color: #08306b;
+  width: 25px;
+}
+
+/* Text */
+.modern-menu h6 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.modern-menu small {
+  color: #888;
+  font-size: 12px;
+}
+
+/* Hover effect */
+.modern-menu li a:hover {
+  background: #f5f9ff;
+  border-left: 3px solid #ff9800;
+  transform: translateX(5px);
+}
+
+.modern-menu li a:hover i {
+  color: #ff9800;
+}
+.d-flex {
+  gap: 10px;
+}
+#servicesIcon {
+  transition: 0.3s ease;
 }

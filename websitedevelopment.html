@@ -69,11 +69,82 @@
     <!-- Desktop nav links -->
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <!-- SERVICES MOBILE -->
+<li class="nav-item dropdown modern-dropdown">
+  <a class="nav-link dropdown-toggle" href="digital-marketing-company-coimbatore.html" data-bs-toggle="dropdown">
+    Services
+  </a>
+
+  <ul class="dropdown-menu modern-menu">
+
+    <li>
+      <a href="socialmarketing.html">
+        <i class="fa-solid fa-bullhorn"></i>
+        <div>
+          <h6>Social Media Marketing</h6>
+          <small>Ads & Branding</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="websitedevelopment.html">
+        <i class="fa-solid fa-code"></i>
+        <div>
+          <h6>Website Development</h6>
+          <small>UI/UX & SEO Ready</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="whatsappmarketing.html">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div>
+          <h6>WhatsApp Marketing</h6>
+          <small>Automation & Leads</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="seo.html">
+        <i class="fa-solid fa-chart-line"></i>
+        <div>
+          <h6>SEO</h6>
+          <small>Rank & Grow</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="salescrmservice.html">
+        <i class="fa-solid fa-database"></i>
+        <div>
+          <h6>Sales CRM</h6>
+          <small>Lead Management</small>
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="emailmarketing.html">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <div>
+          <h6>Email Marketing</h6>
+          <small>Automation</small>
+        </div>
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+     
         <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -87,28 +158,93 @@
 </nav>
 
 
-<!-- Offcanvas for mobile -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-  <div class="offcanvas-header">
-    <img src="./assets/images/logo.png" alt="Logo" class="offcanvas-logo">
+<!-- ===== OFFCANVAS MOBILE MENU ===== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+  
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <img src="./assets/images/logo.png" alt="Logo" style="height:40px;">
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
+
+  <!-- Body -->
   <div class="offcanvas-body">
+
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fa-solid fa-house me-2"></i> Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">
+          <i class="fa-solid fa-user me-2"></i> About Us
+        </a>
+      </li>
+
+  <li class="nav-item">
+
+  <div class="d-flex g-5 align-items-center">
+
+    <!-- TEXT → GO TO PAGE -->
+    <a class="nav-link"
+       href="digital-marketing-company-coimbatore.html">
+      <i class="fa-solid fa-briefcase me-2"></i> Services
+    </a>
+
+    <!-- ARROW → TOGGLE -->
+    <a class="nav-link"
+       href="#mobileServices"
+       id="servicesToggle">
+      <i class="fa-solid fa-chevron-down" id="servicesIcon"></i>
+    </a>
+
+  </div>
+
+  <!-- DROPDOWN -->
+  <div class="collapse " id="mobileServices">
+    <ul class="list-unstyled">
+
+      <li><a class="nav-link" href="socialmarketing.html">Social Media Marketing</a></li>
+      <li><a class="nav-link" href="websitedevelopment.html">Website Design & Development</a></li>
+      <li><a class="nav-link" href="whatsappmarketing.html">WhatsApp Marketing</a></li>
+      <li><a class="nav-link" href="seo.html">SEO</a></li>
+      <li><a class="nav-link" href="salescrmservice.html">Sales CRM Service</a></li>
+      <li><a class="nav-link" href="emailmarketing.html">Email Marketing</a></li>
+      <li><a class="nav-link" href="logodesign.html">Logo Designing</a></li>
+
     </ul>
-    <div class="mt-3">
-   <a href="contact.html" class="register-btn  wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+  </div>
+
+</li>
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link" href="blog.php">
+          <i class="fa-solid fa-blog me-2"></i> Blog
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+          <i class="fa-solid fa-envelope me-2"></i> Contact Us
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- CTA Button -->
+    <div class="mt-4 text-center">
+      <a href="contact.html" class="register-btn w-100">
         REGISTER NOW →
-      </a>    </div>
+      </a>
+    </div>
+
   </div>
 </div>
-
-
 
 
 
@@ -148,7 +284,7 @@
       <!-- LEFT IMAGE -->
       <div class="col-lg-6">
         <div class="webDev-imageBox">
-          <img src="https://img.freepik.com/premium-photo/developer-creating-ecommerce-mobile-app-with-code-design-multiscreens_1198884-73865.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Web Design">
+          <img src="https://img.freepik.com/premium-photo/developer-creating-ecommerce-mobile-app-with-code-design-multiscreens_1198884-73865.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Web Design" loading="lazy">
         </div>
       </div>
 
@@ -218,12 +354,18 @@
 </section>
 <section class="serviceSec">
 <div class="container">
+      <div class="section-header text-center animate__animated animate__fadeInDown mb-5">
+      <h5 class="sub-title">Our Services</h5>
+  <h2 class="title">Website Development Services</h2>
+
+    </div>
+
 
 <div class="row g-4">
 <!-- 1. Business Website -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/website-mockup-ai-image-generator_784890-13080.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/website-mockup-ai-image-generator_784890-13080.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="sads" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -235,7 +377,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Corporate, company profile, portfolio, and service-based websites.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -244,7 +385,7 @@
 <!-- 2. E-Commerce -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/screen-showing-homepage-website_973183-53734.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/screen-showing-homepage-website_973183-53734.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="sds" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -256,7 +397,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Online stores with payment gateway, cart system, and order tracking.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -265,7 +405,7 @@
 <!-- 3. Landing Pages -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/landing-page-template-architect-company_1139417-131500.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/landing-page-template-architect-company_1139417-131500.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="ss" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -277,7 +417,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>High-conversion pages for ads, campaigns, and lead generation.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -286,7 +425,7 @@
 <!-- 4. Web Applications -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/real-estate-meeting-table-with-laptop-blueprints-illustration-design_1277546-7270.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/real-estate-meeting-table-with-laptop-blueprints-illustration-design_1277546-7270.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="jj" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -298,7 +437,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>CRM, ERP, dashboards, booking systems, and SaaS applications.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -307,7 +445,7 @@
 <!-- 5. SEO Optimization -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="SEO Optimization" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -319,7 +457,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>On-page SEO, meta tags, schema, and search engine optimization.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -328,7 +465,7 @@
 <!-- 6. Speed Optimization -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="">
+    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" alt="Speed Optimization" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -340,7 +477,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Improve website speed, Core Web Vitals, and performance tuning.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -348,7 +484,7 @@
 <!-- 7. UI/UX Design -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="./assets/images/northeast.png" alt="">
+    <img src="./assets/images/northeast.png" alt="UI/UX Design" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -360,7 +496,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Modern UI design, wireframing, and user experience optimization.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -369,7 +504,7 @@
 <!-- 8. Real Estate -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="./assets/images/mock3 1.png" alt="">
+    <img src="./assets/images/mock3 1.png" alt="Real Estate Websites" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -381,7 +516,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Property listings, advanced filters, and enquiry systems.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -390,7 +524,7 @@
 <!-- 9. Hosting & Deployment -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/cloud-infrastructure-with-multiple-servers_1104763-20744.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/cloud-infrastructure-with-multiple-servers_1104763-20744.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Hosting & Deployment" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -402,7 +536,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Domain setup, hosting configuration, SSL, and deployment.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -411,7 +544,7 @@
 <!-- 10. API Integration -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://img.freepik.com/premium-photo/api-application-programming-interface-concept-programmer-types-laptop_1157866-1912.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="">
+    <img src="https://img.freepik.com/premium-photo/api-application-programming-interface-concept-programmer-types-laptop_1157866-1912.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="API Integration" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -423,7 +556,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Payment gateways, CRM, WhatsApp, and API integrations.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -432,7 +564,7 @@
 <!-- 11. Responsive Design -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="./assets/images/srmrealestate.png" alt="">
+    <img src="./assets/images/srmrealestate.png" alt="Responsive Design" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon">
@@ -444,7 +576,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Mobile-friendly, tablet optimized, and cross-browser compatible.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -453,7 +584,7 @@
 <!-- 12. Automation Solutions -->
 <div class="col-lg-4">
   <div class="serviceCard">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Automation Solutions" loading="lazy">
     
     <div class="serviceTop">
       <div class="serviceIcon" style="background:#e5e7eb; color:#111;">
@@ -465,7 +596,6 @@
     <div class="serviceOverlay">
       <div class="serviceContent">
         <p>Workflow automation, dashboards, and business tools.</p>
-        <a href="#">Read More</a>
       </div>
     </div>
   </div>
@@ -568,7 +698,7 @@
   <!-- CENTER IMAGE (NEW) -->
   <div class="col-lg-4 text-center">
     <img src="https://img.freepik.com/premium-photo/team-urban-planners-working-together-city-model-showcasing-collaboration-innovation-future-urban-design_856795-81939.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80"
-         alt=""
+         alt="Why Choose Puzzle Diplomats" loading="lazy"
          style="width:100%; max-width:320px; border-radius:20px;">
   </div>
 
@@ -670,7 +800,7 @@
 <!-- IMAGE -->
 <div class="col-lg-4">
   <div class="ctaImg">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="">
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Call to Action" loading="lazy">
   </div>
 </div>
 
@@ -679,7 +809,7 @@
   <div class="ctaContent">
     <div class="ctaBox">
       <h2>We are Ready<br>Develop Your Site!</h2>
-      <a href="#" class="ctaBtn">DISCOVER MORE</a>
+      <a href="contact.html" class="ctaBtn">DISCOVER MORE</a>
     </div>
   </div>
 </div>
@@ -694,7 +824,7 @@
 
   <!-- IMAGE -->
   <div class="col-lg-6">
-    <img src="https://img.freepik.com/premium-photo/broker-discussing-property-listings-with-potential-buyers_1104763-9595.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="faqImg" alt="">
+    <img src="https://img.freepik.com/premium-photo/broker-discussing-property-listings-with-potential-buyers_1104763-9595.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="faqImg" alt="Frequently Asked Questions" loading="lazy">
   </div>
 
   <!-- FAQ -->
@@ -799,61 +929,158 @@
   </button>
 </div>
 
+<style>/* Phone Links */
+.footer-contact a {
+  color: #ddd !important;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #00c6ff;
+}
+</style>
 <!-- ===== Footer Section Start ===== -->
 <footer class="footer-section text-white">
-  <div class="container-fluid">
+  <div class="container g-5">
     <div class="row g-4">
-      
+
       <!-- Brand Info -->
-      <div class="col-lg-4 col-md-6 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+      <div class="col-lg-3 col-md-6">
         <div class="footer-logo mb-3">
-          <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid" />
+          <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid">
         </div>
         <p>
           We help real estate brands grow with strategy, creative content, and performance marketing —
           turning your projects into profitable success stories.
         </p>
+
         <div class="social-links mt-3">
-          <a href="https://www.facebook.com/profile.php?id=61566677074509" target="_blank" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com/in/puzzle-diplomats-digitalmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/puzzlediplomatsmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/917094858696" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/people/Puzzle-Diplomats/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/puzzlediplomats" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://www.instagram.com/puzzlediplomatsads/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/917094858696" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+      <div class="col-lg-2 col-md-6">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="blog.php">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+
+          <li class="mb-2">
+            <a href="index.html"><i class="fa-solid fa-house me-2"></i> Home</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="about.html"><i class="fa-solid fa-user me-2"></i> About</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="service.html"><i class="fa-solid fa-briefcase me-2"></i> Services</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="blog.php"><i class="fa-solid fa-blog me-2"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="contact.html"><i class="fa-solid fa-envelope me-2"></i> Contact</a>
+          </li>
+
         </ul>
       </div>
 
       <!-- Services -->
-      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-        <h5 class="fw-bold mb-3">Our Solutions</h5>
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled footer-links">
-          <li><a href="service.html">Brand Strategy</a></li>
-          <li><a href="service.html">Content & Creative</a></li>
-          <li><a href="service.html">Lead Generation</a></li>
-          <li><a href="service.html">Performance Marketing</a></li>
-          <li><a href="service.html">Web Development</a></li>
+
+          <li class="mb-2">
+            <a href="socialmarketing.html">
+              <i class="fa-solid fa-bullhorn me-2"></i> Social Media Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="websitedevelopment.html">
+              <i class="fa-solid fa-code me-2"></i> Website Development
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="whatsappmarketing.html">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="seo.html">
+              <i class="fa-solid fa-chart-line me-2"></i> SEO
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="salescrmservice.html">
+              <i class="fa-solid fa-database me-2"></i> Sales CRM
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="emailmarketing.html">
+              <i class="fa-solid fa-envelope-open-text me-2"></i> Email Marketing
+            </a>
+          </li>
+
         </ul>
       </div>
 
       <!-- Contact Info -->
-      <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInRight" data-wow-delay="0.5s">
+      <div class="col-lg-4 col-md-6">
         <h5 class="fw-bold mb-3">Get In Touch</h5>
         <ul class="list-unstyled footer-contact">
-          <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Coimbatore, Dubai</li>
-          <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> puzzle@diplomats.co.in</li>
-          <li><i class="fa-solid fa-phone me-2"></i> +91 70948 58696</li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-building me-2"></i>
+            <strong>Head Office:</strong> Coimbatore
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-map-location-dot me-2"></i>
+            <strong>Branches:</strong> Bangalore, Chennai, Dubai
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-envelope me-2"></i>
+            manager@puzzlediplomats.com
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-phone me-2"></i>
+            <strong>India:</strong><a href="tel:+917094858696" class="d-block">+91 7094858696</a>
+            
+            <a href="tel:+918778915403" class="d-block">+91 8778915403</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-globe me-2"></i>
+            <strong>UAE:</strong>
+            <a href="tel:+971504092758">+971 50 409 2758</a>
+          </li>
+
         </ul>
       </div>
+
     </div>
 
     <hr class="my-4">
@@ -861,10 +1088,11 @@
     <div class="row text-center">
       <div class="col-12">
         <p class="mb-0 small">
-          &copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Coimbatore.
+          &copy; 2026  Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Coimbatore.
         </p>
       </div>
     </div>
+
   </div>
 </footer>
 <!-- ===== Footer Section End ===== -->

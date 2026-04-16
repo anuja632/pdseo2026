@@ -130,31 +130,141 @@ if ($currentIndex !== false) {
 </script>
 </head>
 <body>
-    <!-- Navigation (same as blog.php) -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="custom-navbar">
-        <div class="container-fluid">
-            <div class="logo-section">
-                <a href="index.html">
-                    <img src="./assets/images/logo.png" alt="Logo">
-                </a>
-            </div>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="blog.php">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="d-none d-lg-flex align-items-center pe-4">
-                <a href="contact.html" class="register-btn">REGISTER NOW →</a>
-            </div>
+<nav class="navbar navbar-expand-lg fixed-top " id="custom-navbar">
+  <div class="container-fluid">
+
+    <!-- White angled logo section -->
+    <div class="logo-section">
+      <img src="./assets/images/logo.png" alt="Logo">
+    </div>
+
+    <!-- Mobile toggle button -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop nav links -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <!-- SERVICES MOBILE -->
+
+
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+    Services
+  </a>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="socialmarketing.html">Social Media Marketing</a></li>
+    <li><a class="dropdown-item" href="websitedevelopment.html">Website Design & Development</a></li>
+    <li><a class="dropdown-item" href="logodesign.html">Logo Designing</a></li>
+    <li><a class="dropdown-item" href="seo.html">SEO</a></li>
+    <li><a class="dropdown-item" href="emailmarketing.html">Email Marketing</a></li>
+    <li><a class="dropdown-item" href="whatsappmarketing.html">Whatsapp Marketing</a></li>
+    <li><a class="dropdown-item" href="salescrmservice.html">Sales CRM Service</a></li>
+  </ul>
+</li>
+      </li>
+        <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Register button for desktop -->
+    <div class="d-none d-lg-flex align-items-center pe-4">
+         <a href="contact.html" class="register-btn  wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+        REGISTER NOW →
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ===== OFFCANVAS MOBILE MENU ===== -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+  
+  <!-- Header -->
+  <div class="offcanvas-header border-bottom">
+    <img src="./assets/images/logo.png" alt="Logo" style="height:40px;">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <!-- Body -->
+  <div class="offcanvas-body">
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fa-solid fa-house me-2"></i> Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">
+          <i class="fa-solid fa-user me-2"></i> About Us
+        </a>
+      </li>
+
+      <!-- SERVICES DROPDOWN -->
+      <li class="nav-item">
+        <a class="nav-link d-flex  align-items-center"
+           data-bs-toggle="collapse"
+           href="#mobileServices">
+           
+          <span>
+            <i class="fa-solid fa-briefcase me-2"></i> Services
+          </span>
+
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="collapse ps-3" id="mobileServices">
+          <ul class="list-unstyled">
+
+            <li><a class="nav-link" href="socialmarketing.html">Social Media Marketing</a></li>
+
+            <li><a class="nav-link" href="websitedevelopment.html">Website Design & Development</a></li>
+
+            <li><a class="nav-link" href="whatsappmarketing.html">WhatsApp Marketing</a></li>
+
+            <li><a class="nav-link" href="seo.html">SEO</a></li>
+
+            <li><a class="nav-link" href="salescrmservice.html">Sales CRM Service</a></li>
+
+            <li><a class="nav-link" href="emailmarketing.html">Email Marketing</a></li>
+
+            <li><a class="nav-link" href="logodesign.html">Logo Designing</a></li>
+
+          </ul>
         </div>
-    </nav>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="blog.php">
+          <i class="fa-solid fa-blog me-2"></i> Blog
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">
+          <i class="fa-solid fa-envelope me-2"></i> Contact Us
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- CTA Button -->
+    <div class="mt-4 text-center">
+      <a href="contact.html" class="register-btn w-100">
+        REGISTER NOW →
+      </a>
+    </div>
+
+  </div>
+</div>
 
     <!-- Blog Post Content -->
     <div class="container">
@@ -254,64 +364,174 @@ if ($currentIndex !== false) {
         </div>
     </div>
 
-    <!-- Footer (same as blog.php) -->
-    <footer class="footer-section text-white mt-5">
-        <div class="container-fluid">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-logo mb-3">
-                        <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid" />
-                    </div>
-                    <p>We help real estate brands grow with strategy, creative content, and performance marketing — turning your projects into profitable success stories.</p>
-                    <div class="social-links mt-3">
-                        <a href="https://www.facebook.com/profile.php?id=61566677074509" target="_blank" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/puzzle-diplomats-digitalmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/puzzlediplomatsmarketing/" target="_blank" class="me-2"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://wa.me/917094858696" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
+    <style>/* Phone Links */
+.footer-contact a {
+  color: #ddd !important;
+  text-decoration: none;
+}
 
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="fw-bold mb-3">Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="blog.php">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+.footer-contact a:hover {
+  color: #00c6ff;
+}
+</style>
+<!-- ===== Footer Section Start ===== -->
+<footer class="footer-section text-white">
+  <div class="container g-5">
+    <div class="row g-4">
 
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-3">Our Solutions</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="service.html">Brand Strategy</a></li>
-                        <li><a href="service.html">Content & Creative</a></li>
-                        <li><a href="service.html">Lead Generation</a></li>
-                        <li><a href="service.html">Performance Marketing</a></li>
-                        <li><a href="service.html">Web Development</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold mb-3">Get In Touch</h5>
-                    <ul class="list-unstyled footer-contact">
-                        <li class="mb-2"><i class="fa-solid fa-location-dot me-2"></i> Bangalore, Dubai</li>
-                        <li class="mb-2"><i class="fa-solid fa-envelope me-2"></i> puzzle@diplomats.co.in</li>
-                        <li><i class="fa-solid fa-phone me-2"></i> +91 70948 58696</li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr class="my-4">
-
-            <div class="row text-center">
-                <div class="col-12">
-                    <p class="mb-0 small">&copy; 2025 Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Bangalore.</p>
-                </div>
-            </div>
+      <!-- Brand Info -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-logo mb-3">
+          <img src="./assets/images/logo.png" alt="Puzzle Diplomats Logo" class="img-fluid">
         </div>
-    </footer>
+        <p>
+          We help real estate brands grow with strategy, creative content, and performance marketing —
+          turning your projects into profitable success stories.
+        </p>
+
+        <div class="social-links mt-3">
+          <a href="https://www.facebook.com/people/Puzzle-Diplomats/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/puzzlediplomats" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://www.instagram.com/puzzlediplomatsads/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/917094858696" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+
+          <li class="mb-2">
+            <a href="index.html"><i class="fa-solid fa-house me-2"></i> Home</a>
+          </li>
+
+          <li class="mb-2">
+            <a href="about.html"><i class="fa-solid fa-user me-2"></i> About</a>
+          </li>
+
+          <!-- <li class="mb-2">
+            <a href="service.html"><i class="fa-solid fa-briefcase me-2"></i> Services</a>
+          </li> -->
+
+          <li class="mb-2">
+            <a href="blog.php"><i class="fa-solid fa-blog me-2"></i> Blog</a>
+          </li>
+
+          <li>
+            <a href="contact.html"><i class="fa-solid fa-envelope me-2"></i> Contact</a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Services</h5>
+        <ul class="list-unstyled footer-links">
+
+          <li class="mb-2">
+            <a href="socialmarketing.html">
+              <i class="fa-solid fa-bullhorn me-2"></i> Social Media Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="websitedevelopment.html">
+              <i class="fa-solid fa-code me-2"></i> Website Development
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="whatsappmarketing.html">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Marketing
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="seo.html">
+              <i class="fa-solid fa-chart-line me-2"></i> SEO
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="salescrmservice.html">
+              <i class="fa-solid fa-database me-2"></i> Sales CRM
+            </a>
+          </li>
+
+          <li class="mb-2">
+            <a href="emailmarketing.html">
+              <i class="fa-solid fa-envelope-open-text me-2"></i> Email Marketing
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">Get In Touch</h5>
+        <ul class="list-unstyled footer-contact">
+
+          <li class="mb-2">
+            <i class="fa-solid fa-building me-2"></i>
+            <strong>Head Office:</strong> Coimbatore
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-map-location-dot me-2"></i>
+            <strong>Branches:</strong> Bangalore, Chennai, Dubai
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-envelope me-2"></i>
+            manager@puzzlediplomats.com
+          </li>
+
+          <li class="mb-2">
+            <i class="fa-solid fa-phone me-2"></i>
+            <strong>India:</strong><a href="tel:+917094858696" class="d-block">+91 7094858696</a>
+            
+            <a href="tel:+918778915403" class="d-block">+91 8778915403</a>
+          </li>
+
+          <li>
+            <i class="fa-solid fa-globe me-2"></i>
+            <strong>UAE:</strong>
+            <a href="tel:+971504092758">+971 50 409 2758</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row text-center">
+      <div class="col-12">
+        <p class="mb-0 small">
+          &copy; 2026  Puzzle Diplomats. All Rights Reserved. Empowering Real Estate Growth from Coimbatore.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- ===== Footer Section End ===== -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
